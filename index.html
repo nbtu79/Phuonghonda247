@@ -1,94 +1,255 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phương Honda - Sửa Xe Tận Nhà</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-        }
-        .contact {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #e7f3fe;
-            border: 1px solid #b3d4fc;
-            border-radius: 5px;
-        }
-        .contact a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honda247 Phương - Sửa Xe Tận Nhà 24/7</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #333);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+      color: #ffcc00;
+    }
+
+    header p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 18px;
+      font-size: 28px;
+      border-left: 6px solid #ffcc00;
+      padding-left: 12px;
+    }
+
+    .intro {
+      font-size: 18px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .service-box {
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #eee;
+    }
+
+    .service-box h3 {
+      color: #111;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .contact-info strong {
+      color: #000;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .call {
+      background: #e60012;
+    }
+
+    .zalo {
+      background: #0068ff;
+    }
+
+    .facebook {
+      background: #1877f2;
+    }
+
+    .drive {
+      background: #0f9d58;
+    }
+
+    .highlight {
+      background: #fff7d6;
+      border-left: 6px solid #ffcc00;
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #e60012;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .floating-call {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Phương Honda</h1>
-        <p>Uy Tín - Nhiệt Tình - Tận Tâm - Chất Lượng</p>
-    </header>
 
-    <section>
-        <h2>Về Chúng Tôi</h2>
-        <p>Phương Honda là địa chỉ tin cậy tại Quận 12, TP.HCM, chuyên cung cấp các dịch vụ sửa chữa và bảo trì xe máy. Với đội ngũ kỹ thuật viên chuyên nghiệp, chúng tôi cam kết mang đến sự hài lòng tối đa cho khách hàng.</p>
+  <header>
+    <h1>Honda247 Phương</h1>
+    <p>Sửa xe tận nhà 24/7 - Uy tín - Nhanh chóng - Tận tâm</p>
+  </header>
+
+  <div class="container">
+
+    <section class="card">
+      <h2>Giới Thiệu</h2>
+      <p class="intro">
+        Honda247 Phương chuyên cung cấp dịch vụ sửa chữa, bảo trì xe máy tận nơi tại TP.HCM.
+        Với tinh thần phục vụ nhanh chóng, tận tâm và chất lượng, chúng tôi luôn sẵn sàng hỗ trợ khách hàng mọi lúc, mọi nơi.
+      </p>
+
+      <div class="highlight">
+        Hotline & Zalo: <strong>0942 757 733</strong> — Phục vụ 24/7
+      </div>
     </section>
 
-    <section>
-        <h2>Dịch Vụ</h2>
-        <ul>
-            <li><strong>Sửa xe tận nhà 24/7:</strong> Hỗ trợ nhanh chóng, mọi lúc, mọi nơi.</li>
-            <li><strong>Bảo trì định kỳ xe máy:</strong> Đảm bảo xe của bạn luôn trong tình trạng tốt nhất.</li>
-            <li><strong>Thay thế phụ tùng chính hãng:</strong> Đảm bảo chất lượng và tuổi thọ xe máy.</li>
-        </ul>
+    <section class="card">
+      <h2>Dịch Vụ</h2>
+
+      <div class="services">
+        <div class="service-box">
+          <h3>Sửa xe tận nhà 24/7</h3>
+          <p>Hỗ trợ nhanh chóng, mọi lúc, mọi nơi khi xe gặp sự cố.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Bảo trì định kỳ xe máy</h3>
+          <p>Đảm bảo xe của bạn luôn trong tình trạng vận hành tốt nhất.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Thay thế phụ tùng chính hãng</h3>
+          <p>Đảm bảo chất lượng, độ bền và tuổi thọ cho xe máy.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-        <h2>Liên Hệ</h2>
-        <p><strong>Địa chỉ:</strong> 185 Khu phố 3, Đường TX52, Phường Thạnh Xuân, Quận 12, TP.HCM</p>
-        <p><strong>Hotline & Zalo:</strong> <a href="tel:0922722012">0922722012</a></p>
+    <section class="card">
+      <h2>Liên Hệ</h2>
+
+      <div class="contact-info">
+        <p><strong>Địa chỉ:</strong> 814 Hà Huy Giáp, Phường An Phú Đông, TP.HCM</p>
+        <p><strong>Hotline & Zalo:</strong> 0942 757 733</p>
         <p><strong>Thời gian làm việc:</strong> 24/7</p>
+      </div>
+
+      <div class="buttons">
+        <a class="btn call" href="tel:0942757733">Gọi Ngay</a>
+        <a class="btn zalo" href="https://zalo.me/0942757733" target="_blank">Chat Zalo</a>
+        <a class="btn facebook" href="https://www.facebook.com/PHUONGHONDA247" target="_blank">Facebook</a>
+        <a class="btn drive" href="https://docs.google.com/spreadsheets/d/1fUi87J84HG2sE9suo9k5GnVBowUGG4wCmvGPVNpAH_k/edit?pli=1&gid=0#gid=0" target="_blank">Xem Dữ Liệu</a>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Phương Honda. All rights reserved.</p>
-    </footer>
+  </div>
+
+  <footer>
+    <p>© 2026 Honda247 Phương. Dịch vụ sửa xe tận nhà 24/7 tại TP.HCM.</p>
+  </footer>
+
+  <a class="floating-call" href="tel:0942757733">Gọi 0942 757 733</a>
+
 </body>
 </html>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtmS9I80lzhv0vyJXtI2Cnuxn_KT_ZFplyu4BFp6ptdKKwyTvV2Nt_trTCpbGps1mwJ7-TdqItKbk6/pubhtml?widget=true&amp;headers=false" width="100%" height="500"></iframe>
 
-
+Cách cập nhật: vào GitHub → Phuonghonda247 → index.html → cây bút Edit → xóa code cũ → dán code mới → Commit changes. Sau đó chờ 1–3 phút rồi F5 lại web.
